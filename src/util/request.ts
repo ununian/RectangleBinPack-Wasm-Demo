@@ -31,7 +31,7 @@ export async function request<T>(
   try {
     const res = await instance.request({ ...config, url });
     return res.data as ResponseDto<T>;
-  } catch (error) {
+  } catch (error: any) {
     if (error.response.data) {
       throw error.response.data;
     }
