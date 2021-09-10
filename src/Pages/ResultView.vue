@@ -3,8 +3,8 @@
     <div v-if="svg" v-html="svg"></div>
     <div v-else-if="rects && width && height">
       <svg
-        width="1000px"
-        height="1000px"
+        :width="`${width}px`"
+        :height="`${height}px`"
         :viewBox="`0 0 ${width} ${height}`"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
